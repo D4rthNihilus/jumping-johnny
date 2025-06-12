@@ -2,7 +2,7 @@ const johnny = document.querySelector('.johnny');
 const clarice = document.querySelector('.clarice');
 let score = 0;
 let divscore = document.querySelector('.score');
-
+let gameover = document.querySelector('.gameover');
 const jump = () => {
     johnny.classList.add('jump');
 
@@ -27,9 +27,13 @@ const loop = setInterval(() => {
         johnny.style.zIndex = 2;
 
         clearInterval(loop);
+
+        gameover.style.display = 'block';
     } else {
-        score ++;
-        divscore.innerHTML = score;
+        score++
+        if (score%190 == 0) {
+            divscore.innerHTML = `${score / 190} Clarices`;
+        }
     }
 }, 10)
 
