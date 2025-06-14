@@ -5,6 +5,11 @@
     src: url(fonts/Games.ttf) format("truetype");
 }
 
+@font-face {
+    font-family: "GameOver";
+    src: url(fonts/gameover.ttf) format("truetype");
+}
+
 * {
     margin: 0px;
     padding: 0px;
@@ -32,13 +37,99 @@ div.game {
     overflow: hidden;
 }
 
+.start, .customButton {
+    position: absolute;
+    z-index: 4;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 250px;
+    padding: 10px;
+    font-size: 1.5em;
+    font-weight: bolder;
+    border-radius: 20px;
+    border: none;
+    box-shadow: 2px 2px 3px black;
+    color:white;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.start {
+    top: 50%;
+    background-color: rgb(255, 0, 0); 
+}
+
+.start:hover{
+    background-color: rgb(190, 4, 4);
+}
+
+.start:active{
+    background-color: rgb(114, 3, 3);
+}
+
+.customButton {
+    top: 70%;
+    background-color:navy;
+}
+
+.customButton:hover{
+    background-color: rgb(1, 1, 95);
+}
+
+.customButton:active{
+    background-color: rgb(1, 1, 39);
+}
+
+.skins {
+    z-index: 5;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid black;
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-weight: bolder;
+    display: none;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 90%;
+    transform: translate(-50%, -50%);
+    padding: 20px 10px;
+}
+
+.skins > div {
+    background-color: rgb(215, 230, 243);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid white;
+}
+
+.skins > div:hover {
+    box-sizing: border-box;
+    border: 3px solid red;
+}
+
+.skins > div > img {
+    width: 120px;
+}
+
+.skins > p {
+    background-color: white;
+    padding: 10px;
+    border-radius: 20px;
+}
+
 .clarice {
     width: 170px;
     position: absolute;
     bottom: 25px;
     right: -125px;
-    animation: clarice-animation 2s infinite linear;
-    z-index: 1;
+    animation: none;
+    z-index: 3;
 }
 
 @keyframes clarice-animation {
@@ -56,7 +147,7 @@ div.game {
     position: absolute;
     left: 30px;
     bottom: 0px;
-    z-index: 2;
+    z-index: 4;
 }
 
 .jump {
@@ -98,6 +189,7 @@ div.game {
 
 .score {
     position: absolute;
+    z-index: 3;
     top: 50px;
     left: 50px;
     font-size: 1.5em;
@@ -109,14 +201,41 @@ div.game {
 
 .gameover {
     position: absolute;
+    z-index: 3;
     font-size: 1.5em;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'GameOver',Verdana, Geneva, Tahoma, sans-serif;
     color: red;
     font-weight: bolder;
-    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.445);
+    text-shadow: 1px 1px 3px rgb(255, 255, 255);
     left: 50%;
-    bottom: 50%;
+    bottom: 40%;
     transform: translate(-50%, -50%);
     text-align: center;
     display: none;
+}
+
+.clouds {
+    position: absolute;
+    z-index: 2;
+    top: 60px;
+    width: 500px;
+    animation: cloudsMove 7s infinite linear;
+}
+
+@keyframes cloudsMove {
+    from {
+        left: -650px;
+    } to {
+        left: 100%;
+    }
+}
+
+.sun {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    z-index: 0;
+    position: absolute;
+    top: 10%;
+    right: 10%;
 }
