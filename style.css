@@ -199,21 +199,6 @@ div.game {
     text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.466);
 }
 
-.gameover {
-    position: absolute;
-    z-index: 3;
-    font-size: 1.5em;
-    font-family: 'GameOver',Verdana, Geneva, Tahoma, sans-serif;
-    color: red;
-    font-weight: bolder;
-    text-shadow: 1px 1px 3px rgb(255, 255, 255);
-    left: 50%;
-    bottom: 40%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    display: none;
-}
-
 .clouds {
     position: absolute;
     z-index: 2;
@@ -238,4 +223,40 @@ div.game {
     position: absolute;
     top: 10%;
     right: 10%;
+}
+
+.gameover {
+    position: absolute;
+    z-index: 3;
+    width: 400px;
+    font-size: 1.5em;
+    font-family: 'GameOver',Verdana, Geneva, Tahoma, sans-serif;
+    color: red;
+    font-weight: bolder;
+    text-shadow: 2px 2px 3px rgb(255, 255, 255);
+    left: 50%;
+    bottom: 58%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    display: none;
+}
+
+.reload {
+    position: absolute;
+    width: 100px;
+    z-index: 3;
+    left: 50%;
+    bottom: 50%;
+    transform: translate(-50%,50%);
+    margin: auto;
+    display: none;
+    opacity: 0.8;
+}
+
+.reload:hover {
+    opacity: 1;
+}
+
+.reload:active {
+    opacity: 0.8;
 }

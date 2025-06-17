@@ -1,18 +1,26 @@
 let startButton = document.querySelector('.start');
 let customButton = document.querySelector('.customButton');
 let skins = document.querySelector('.skins');
+let characterIndex = 1;
 const johnny = document.querySelector('.johnny');
+let johnnyGameOver = 'skins/jone-hurt.png';
+let johnnyGmOvSize = '85px';
 const clarice = document.querySelector('.clarice');
 const sky = document.querySelector('div.game');
 let sun = document.querySelector('.sun');
 let score = 0;
 let divscore = document.querySelector('.score');
 let gameover = document.querySelector('.gameover');
+let reloadButton = document.querySelector('.reload');
 
 function start() {
     startButton.style.display = 'none';
     customButton.style.display = 'none';
     clarice.style.animation = 'clarice-animation 2s infinite linear';
+    let contador = setInterval(function(){
+                score++;
+                divscore.innerHTML = `${score} Clarices`;
+            }, 2000);
     const jump = () => {
         johnny.classList.add('jump');
 
@@ -33,25 +41,59 @@ function start() {
             johnny.style.animation = 'none';
             johnny.style.bottom = '30px';
 
-            johnny.src = 'images/jone-hurt.png';
-            johnny.style.width = '85px';
+            johnny.src = johnnyGameOver;
+            johnny.style.width = johnnyGmOvSize;
             johnny.style.zIndex = 4 ;
 
             clearInterval(loop);
-
+            clearInterval(contador);
             gameover.style.display = 'block';
-        } else {
-            score++;
-            if (score%190 == 0) {
-                divscore.innerHTML = `${score / 190} Clarices`;
-            }
-        } 
+            reloadButton.style.display = 'block';
+        }
 
-        if (score/190 >= 21) {
+        if (score/200 >= 21) {
             sky.style.backgroundImage = 'linear-gradient(to bottom,  rgb(11, 55, 75), purple)';
             sun.src = 'images/moon.png';
         }
     }, 10);
 
     document.addEventListener('keydown', jump);
+}
+
+function customize() {
+    skins.style.display = 'grid';
+}
+
+function jncl() {
+    characterIndex = 1;
+    johnny.src='skins/jone.png';
+    johnny.style.width = '130px';
+    johnnyGameOver = 'skins/jone-hurt.png';
+    johnnyGmOvSize = '85px';
+    skins.style.display = 'none';
+}
+
+function arqi() {
+    characterIndex = 2;
+    johnny.src='skins/iris.png';
+    johnny.style.width = '115px';
+    johnny.style.bottom = '10px';
+    johnnyGameOver = 'skins/iris-hurt.png';
+    johnnyGmOvSize = '105px';
+    skins.style.display = 'none';
+
+}
+
+function jnch() {
+    characterIndex = 3;
+    johnny.src='skins/jone-roupa-chaves.png';
+    johnny.style.width = '130px';
+    johnnyGameOver = 'skins/jone-hurt.png';
+    johnnyGmOvSize = '85px';
+    skins.style.display = 'none';
+}
+
+function reload() {
+    location.reload();
+    reloadButton.style.display = 'none';
 }
