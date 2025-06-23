@@ -286,6 +286,10 @@ div.game {
     }
 
     .divgame {
-        height: 400px;
+        height: 350px;
+    }
+
+    .start, .customButton {
+        width: 200px;
     }
 }

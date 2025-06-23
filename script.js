@@ -12,7 +12,6 @@ let score = 0;
 let divscore = document.querySelector('.score');
 let gameover = document.querySelector('.gameover');
 let reloadButton = document.querySelector('.reload');
-
 function start() {
     startButton.style.display = 'none';
     customButton.style.display = 'none';
@@ -78,6 +77,7 @@ function start() {
     }, 10);
 
     document.addEventListener('keydown', jump);
+    document.addEventListener('touchend', jump);
 }
 
 function customize() {
