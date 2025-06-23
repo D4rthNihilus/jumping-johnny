@@ -64,7 +64,7 @@ function customize() {
     skins.style.display = 'grid';
 }
 
-function jncl() {
+function joneNovo() {
     characterIndex = 1;
     johnny.src='skins/jone.png';
     johnny.style.width = '130px';
@@ -73,7 +73,7 @@ function jncl() {
     skins.style.display = 'none';
 }
 
-function arqi() {
+function joneclassico() {
     characterIndex = 2;
     johnny.src='skins/iris.png';
     johnny.style.width = '115px';
@@ -84,8 +84,26 @@ function arqi() {
 
 }
 
-function jnch() {
+function joneChaves() {
     characterIndex = 3;
+    johnny.src='skins/jone-roupa-chaves.png';
+    johnny.style.width = '130px';
+    johnnyGameOver = 'skins/jone-hurt.png';
+    johnnyGmOvSize = '85px';
+    skins.style.display = 'none';
+}
+
+function Jonoel() {
+    characterIndex = 4;
+    johnny.src='skins/jone-roupa-chaves.png';
+    johnny.style.width = '130px';
+    johnnyGameOver = 'skins/jone-hurt.png';
+    johnnyGmOvSize = '85px';
+    skins.style.display = 'none';
+}
+
+function Jonoel() {
+    characterIndex = 4;
     johnny.src='skins/jone-roupa-chaves.png';
     johnny.style.width = '130px';
     johnnyGameOver = 'skins/jone-hurt.png';
