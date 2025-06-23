@@ -279,3 +279,9 @@ div.game {
 .reload:active {
     opacity: 0.8;
 }
+
+@media screen and(orientation: landscape) {
+    h1 {
+        display: none;
+    }
+}
