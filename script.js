@@ -33,7 +33,7 @@ function start() {
         const claricePosition = clarice.offsetLeft;
         const johnnyPosition = +window.getComputedStyle(johnny).bottom.replace('px','');
 
-        if (claricePosition <= 80  && claricePosition > 0 && johnnyPosition < 140) {
+        if (claricePosition <= 80  && claricePosition > 0 && johnnyPosition < 180) {
 
             clarice.style.animation = 'none';
             clarice.style.left = `${claricePosition}px`;
@@ -66,18 +66,18 @@ function customize() {
 
 function joneNovo() {
     characterIndex = 1;
-    johnny.src='skins/jone.png';
-    johnny.style.width = '130px';
+    johnny.src='skins/jone-Novo.png';
+    johnny.style.width = '95px';
     johnnyGameOver = 'skins/jone-hurt.png';
     johnnyGmOvSize = '85px';
     skins.style.display = 'none';
 }
 
-function joneclassico() {
+function joneClassico() {
     characterIndex = 2;
-    johnny.src='skins/iris.png';
-    johnny.style.width = '115px';
-    johnny.style.bottom = '10px';
+    johnny.src='skins/jone-classico.png';
+    johnny.style.width = '95px';
+    johnny.style.bottom = '30px';
     johnnyGameOver = 'skins/iris-hurt.png';
     johnnyGmOvSize = '105px';
     skins.style.display = 'none';
@@ -86,26 +86,26 @@ function joneclassico() {
 
 function joneChaves() {
     characterIndex = 3;
-    johnny.src='skins/jone-roupa-chaves.png';
-    johnny.style.width = '130px';
+    johnny.src='skins/jone-chaves.png';
+    johnny.style.width = '95px';
     johnnyGameOver = 'skins/jone-hurt.png';
     johnnyGmOvSize = '85px';
     skins.style.display = 'none';
 }
 
-function Jonoel() {
+function jonoel() {
     characterIndex = 4;
-    johnny.src='skins/jone-roupa-chaves.png';
-    johnny.style.width = '130px';
+    johnny.src='skins/jone-noel.png';
+    johnny.style.width = '95px';
     johnnyGameOver = 'skins/jone-hurt.png';
     johnnyGmOvSize = '85px';
     skins.style.display = 'none';
 }
 
-function Jonoel() {
+function clone() {
     characterIndex = 4;
-    johnny.src='skins/jone-roupa-chaves.png';
-    johnny.style.width = '130px';
+    johnny.src='skins/clone.png';
+    johnny.style.width = '95px';
     johnnyGameOver = 'skins/jone-hurt.png';
     johnnyGmOvSize = '85px';
     skins.style.display = 'none';
