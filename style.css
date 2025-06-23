@@ -280,7 +280,7 @@ div.game {
     opacity: 0.8;
 }
 
-@media screen and(orientation: landscape) {
+@media screen and(min-width: 800px) {
     h1 {
         display: none;
     }
