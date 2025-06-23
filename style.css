@@ -281,15 +281,7 @@ div.game {
 }
 
 @media screen and(min-width: 800px) {
-    h1 {
-        display: none;
-    }
-
-    .divgame {
-        height: 350px;
-    }
-
-    .start, .customButton {
-        width: 200px;
+    * {
+        height: 90%;
     }
 }
