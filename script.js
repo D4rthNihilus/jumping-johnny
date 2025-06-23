@@ -71,7 +71,7 @@ function start() {
             reloadButton.style.display = 'block';
         }
 
-        if (score/200 >= 21) {
+        if (score >= 20) {
             sky.style.backgroundImage = 'linear-gradient(to bottom,  rgb(11, 55, 75), purple)';
             sun.src = 'images/moon.png';
         }
@@ -123,7 +123,7 @@ function jonoel() {
 }
 
 function clone() {
-    characterIndex = 4;
+    characterIndex = 5;
     johnny.src='skins/clone.png';
     johnny.style.width = '95px';
     johnnyGameOver = 'skins/jone-hurt.png';
