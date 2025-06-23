@@ -38,12 +38,32 @@ function start() {
             clarice.style.animation = 'none';
             clarice.style.left = `${claricePosition}px`;
 
-            johnny.style.animation = 'none';
-            johnny.style.bottom = '30px';
+            johnny.style.animation = 'death 3s ease-in-out';
+            setTimeout (function() {
+                johnny.style.display = 'none';
+            }, 3000)
+    
 
-            johnny.src = johnnyGameOver;
-            johnny.style.width = johnnyGmOvSize;
-            johnny.style.zIndex = 4 ;
+            switch (characterIndex) {
+                case 1:
+                    johnny.src = 'skins/joneghost.png'
+                    johnny.style.opacity = '0.8';
+                    break;
+                case 2:
+                    johnny.src = 'skins/jnclasghost.png'
+                    break;
+                case 3:
+                    johnny.src = 'skins/jnchavesghost.png'
+                    break;
+                case 4:
+                    johnny.src = 'skins/jonoelghost.png'
+                    break;
+                case 5:
+                    johnny.src = 'skins/cloneghost.png'
+                    break;
+                default:
+                    johnny.src = 'skins/joneghost.png'
+            }
 
             clearInterval(loop);
             clearInterval(contador);

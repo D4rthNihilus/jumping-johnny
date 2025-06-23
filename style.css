@@ -105,7 +105,7 @@ div.game {
     display: grid;
     height: 180px;
     grid-template-columns: 1fr;
-    justify-content: center;
+    justify-items: center;
     align-items: center;
     border: 3px solid white;
 }
@@ -182,6 +182,17 @@ div.game {
     100% {
         bottom: 30px;
     }
+}
+
+@keyframes death {
+    0% {
+        bottom: 30px;
+    }
+
+    100% {
+        bottom: 495px;
+    }
+    
 }
 
 .grass {
