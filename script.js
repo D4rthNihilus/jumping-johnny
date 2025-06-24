@@ -9,12 +9,13 @@ const clarice = document.querySelector('.clarice');
 const sky = document.querySelector('div.game');
 const sun = document.querySelector('.sun');
 const clouds = document.querySelector('.clouds');
+const grass = document.querySelector('.grass');
 let score = 0;
 let divscore = document.querySelector('.score');
 const gameover = document.querySelector('.gameover');
 const reloadButton = document.querySelector('.reload');
-
 function start() {
+    grass.style.animation = 'walking 2.5s infinite linear';
     startButton.style.display = 'none';
     customButton.style.display = 'none';
     clarice.style.animation = 'clarice-animation 2s infinite linear';
@@ -68,6 +69,7 @@ function start() {
 
             clearInterval(loop);
             clearInterval(contador);
+            grass.style.animation = 'none';
             gameover.style.display = 'block';
             reloadButton.style.display = 'block';
         }

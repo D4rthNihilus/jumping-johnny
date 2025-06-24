@@ -195,15 +195,28 @@ div.game {
     
 }
 
-.grass {
+.grass, .grass2 {
+    position: absolute;
+    left: 0px;
     display: block;
     background-color: rgb(97, 146, 5);
     background-image: url('images/grass2.jpeg');
     background-size: contain;
     position: absolute;
     bottom: 0px;
-    width: 100%;
+    width: 2000px;
     height: 50px;
+    animation: none;
+}
+
+@keyframes walking {
+    0% {
+        left: 0;
+    }
+
+    100% {
+        left: -1000px;
+    }
 }
 
 .score {
