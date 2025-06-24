@@ -77,7 +77,7 @@ function start() {
     }, 10);
 
     document.addEventListener('keydown', jump);
-    document.addEventListener('touchend', jump);
+    document.addEventListener('touchstart', jump);
 }
 
 function customize() {
