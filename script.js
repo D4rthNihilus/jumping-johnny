@@ -1,5 +1,5 @@
-let startButton = document.querySelector('.start');
-let customButton = document.querySelector('.customButton');
+const startButton = document.querySelector('.start');
+const customButton = document.querySelector('.customButton');
 let skins = document.querySelector('.skins');
 let characterIndex = 1;
 const johnny = document.querySelector('.johnny');
@@ -7,11 +7,13 @@ let johnnyGameOver = 'skins/jone-hurt.png';
 let johnnyGmOvSize = '85px';
 const clarice = document.querySelector('.clarice');
 const sky = document.querySelector('div.game');
-let sun = document.querySelector('.sun');
+const sun = document.querySelector('.sun');
+const clouds = document.querySelector('.clouds');
 let score = 0;
 let divscore = document.querySelector('.score');
-let gameover = document.querySelector('.gameover');
-let reloadButton = document.querySelector('.reload');
+const gameover = document.querySelector('.gameover');
+const reloadButton = document.querySelector('.reload');
+
 function start() {
     startButton.style.display = 'none';
     customButton.style.display = 'none';
@@ -73,6 +75,7 @@ function start() {
         if (score >= 20) {
             sky.style.backgroundImage = 'linear-gradient(to bottom,  rgb(11, 55, 75), purple)';
             sun.src = 'images/moon.png';
+            clouds.src = 'images/bats.webp';
         }
     }, 10);
 
