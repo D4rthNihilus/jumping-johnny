@@ -1,10 +1,9 @@
 const startButton = document.querySelector('.start');
 const customButton = document.querySelector('.customButton');
 let skins = document.querySelector('.skins');
-let characterIndex = 1;
+let characterIndex = localStorage.getItem(index);
 const johnny = document.querySelector('.johnny');
-let johnnyGameOver = 'skins/jone-hurt.png';
-let johnnyGmOvSize = '85px';
+let johnnyGameOver = 'skins/joneghost.png';
 const clarice = document.querySelector('.clarice');
 const sky = document.querySelector('div.game');
 const sun = document.querySelector('.sun');
@@ -14,6 +13,7 @@ let score = 0;
 let divscore = document.querySelector('.score');
 const gameover = document.querySelector('.gameover');
 const reloadButton = document.querySelector('.reload');
+
 function start() {
     grass.style.animation = 'walking 2.5s infinite linear';
     startButton.style.display = 'none';
@@ -43,29 +43,10 @@ function start() {
             johnny.style.animation = 'death 3s ease-in-out';
             setTimeout (function() {
                 johnny.style.display = 'none';
-            }, 3000)
-    
+            }, 3000);
 
-            switch (characterIndex) {
-                case 1:
-                    johnny.src = 'skins/joneghost.png'
-                    johnny.style.opacity = '0.8';
-                    break;
-                case 2:
-                    johnny.src = 'skins/jnclasghost.png'
-                    break;
-                case 3:
-                    johnny.src = 'skins/jnchavesghost.png'
-                    break;
-                case 4:
-                    johnny.src = 'skins/jonoelghost.png'
-                    break;
-                case 5:
-                    johnny.src = 'skins/cloneghost.png'
-                    break;
-                default:
-                    johnny.src = 'skins/joneghost.png'
-            }
+            johnny.src = johnnyGameOver;
+            johnny.style.opacity = '0.8';
 
             clearInterval(loop);
             clearInterval(contador);
@@ -80,7 +61,6 @@ function start() {
             clouds.src = 'images/bats.webp';
         }
     }, 10);
-
     document.addEventListener('keydown', jump);
     document.addEventListener('touchstart', jump);
 }
@@ -92,19 +72,15 @@ function customize() {
 function joneNovo() {
     characterIndex = 1;
     johnny.src='skins/jone-Novo.png';
-    johnny.style.width = '95px';
-    johnnyGameOver = 'skins/jone-hurt.png';
-    johnnyGmOvSize = '85px';
+    johnnyGameOver = 'skins/joneghost.png';
     skins.style.display = 'none';
 }
 
 function joneClassico() {
     characterIndex = 2;
     johnny.src='skins/jone-classico.png';
-    johnny.style.width = '95px';
     johnny.style.bottom = '30px';
-    johnnyGameOver = 'skins/iris-hurt.png';
-    johnnyGmOvSize = '105px';
+    johnnyGameOver = 'skins/jnclasghost.png'
     skins.style.display = 'none';
 
 }
@@ -112,27 +88,22 @@ function joneClassico() {
 function joneChaves() {
     characterIndex = 3;
     johnny.src='skins/jone-chaves.png';
-    johnny.style.width = '95px';
-    johnnyGameOver = 'skins/jone-hurt.png';
-    johnnyGmOvSize = '85px';
+    johnnyGameOver = 'skins/jnchavesghost.png';
     skins.style.display = 'none';
 }
 
 function jonoel() {
     characterIndex = 4;
     johnny.src='skins/jone-noel.png';
-    johnny.style.width = '95px';
-    johnnyGameOver = 'skins/jone-hurt.png';
-    johnnyGmOvSize = '85px';
+    johnnyGameOver = 'skins/jonoelghost.png';
     skins.style.display = 'none';
 }
 
 function clone() {
     characterIndex = 5;
+    localStorage.setItem("index", 5);
     johnny.src='skins/clone.png';
-    johnny.style.width = '95px';
-    johnnyGameOver = 'skins/jone-hurt.png';
-    johnnyGmOvSize = '85px';
+    johnnyGameOver = 'skins/cloneghost.png';
     skins.style.display = 'none';
 }
 
