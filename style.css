@@ -31,7 +31,7 @@ div.game {
     border: 1px solid rgba(0, 0, 0, 0.459);
     border-radius: 10px;
     width: 80%;
-    height: 500px;
+    height: 400px;
     margin: 0px auto;
     background-image: linear-gradient(to bottom,  rgb(109, 199, 235), white);
     overflow: hidden;
@@ -221,8 +221,8 @@ div.game {
 .clouds {
     position: absolute;
     z-index: 2;
-    top: 60px;
-    width: 500px;
+    top: 50px;
+    width: 400px;
     animation: cloudsMove 7s infinite linear;
 }
 
