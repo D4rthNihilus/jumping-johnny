@@ -15,11 +15,12 @@ let divscore = document.querySelector('.score');
 const gameover = document.querySelector('.gameover');
 const reloadButton = document.querySelector('.reload');
 
-function start() {
-    if (lifeSkin == null || lifeSkin == undefined || lifeSkin == '') {
+if (lifeSkin == null || lifeSkin == undefined || lifeSkin == '') {
         johnny.src = 'skins/jone-novo.png';
         johnnyGameOver = 'skins/joneghost.png';
     }
+
+function start() {
     grass.style.animation = 'walking 2.5s infinite linear';
     startButton.style.display = 'none';
     customButton.style.display = 'none';
