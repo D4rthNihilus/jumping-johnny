@@ -14,7 +14,7 @@ let divscore = document.querySelector('.score');
 const gameover = document.querySelector('.gameover');
 const reloadButton = document.querySelector('.reload');
 
-if (lifeSkin == undefined || lifeSkin == null || lifeSkin == '') {
+if (lifeSkin == undefined || lifeSkin == null || lifeSkin == '' || !lifeSkin) {
     johnny.src = 'skins/jone-novo.png';
 } else {
     johnny.src = lifeSkin;
