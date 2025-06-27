@@ -14,8 +14,6 @@ const gameover = document.querySelector('.gameover');
 const reloadButton = document.querySelector('.reload');
 
 function start() {
-    johnny.src = localStorage.getItem('char');
-
     grass.style.animation = 'walking 2.5s infinite linear';
     startButton.style.display = 'none';
     customButton.style.display = 'none';
@@ -74,7 +72,6 @@ function customize() {
 function joneNovo() {
     characterIndex = 1;
     johnny.src='skins/jone-Novo.png';
-    localStorage.setItem('char', johnny.src);
     johnnyGameOver = 'skins/joneghost.png';
     skins.style.display = 'none';
 }
@@ -82,7 +79,6 @@ function joneNovo() {
 function joneClassico() {
     characterIndex = 2;
     johnny.src='skins/jone-classico.png';
-    localStorage.setItem('char', johnny.src);
     johnny.style.bottom = '30px';
     johnnyGameOver = 'skins/jnclasghost.png'
     skins.style.display = 'none';
@@ -92,7 +88,6 @@ function joneClassico() {
 function joneChaves() {
     characterIndex = 3;
     johnny.src='skins/jone-chaves.png';
-    localStorage.setItem('char', johnny.src);
     johnnyGameOver = 'skins/jnchavesghost.png';
     skins.style.display = 'none';
 }
@@ -100,7 +95,6 @@ function joneChaves() {
 function jonoel() {
     characterIndex = 4;
     johnny.src='skins/jone-noel.png';
-    localStorage.setItem('char', johnny.src);
     johnnyGameOver = 'skins/jonoelghost.png';
     skins.style.display = 'none';
 }
@@ -108,12 +102,11 @@ function jonoel() {
 function clone() {
     characterIndex = 5;
     johnny.src='skins/clone.png';
-    localStorage.setItem('char', johnny.src);
     johnnyGameOver = 'skins/cloneghost.png';
     skins.style.display = 'none';
 }
 
 function reload() {
-    location.reload();
     reloadButton.style.display = 'none';
+    
 }
