@@ -1,7 +1,7 @@
 const startButton = document.querySelector('.start');
 const customButton = document.querySelector('.customButton');
 let johnnyGameOver = localStorage.getItem('ghost');
-let lifeSkin = localStorage.getItem('skin');
+let lifeSkin = String(localStorage.getItem('skin'));
 let skins = document.querySelector('.skins');
 const johnny = document.querySelector('.johnny');
 johnny.src = lifeSkin;
@@ -14,11 +14,6 @@ let score = 0;
 let divscore = document.querySelector('.score');
 const gameover = document.querySelector('.gameover');
 const reloadButton = document.querySelector('.reload');
-
-if (lifeSkin == null || lifeSkin == undefined || lifeSkin == '') {
-        johnny.src = 'skins/jone-novo.png';
-        johnnyGameOver = 'skins/joneghost.png';
-    }
 
 function start() {
     grass.style.animation = 'walking 2.5s infinite linear';
