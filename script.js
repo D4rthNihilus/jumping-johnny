@@ -1,7 +1,7 @@
 const startButton = document.querySelector('.start');
 const customButton = document.querySelector('.customButton');
 let skins = document.querySelector('.skins');
-let characterIndex = localStorage.getItem(index);
+let characterIndex = 1;
 const johnny = document.querySelector('.johnny');
 let johnnyGameOver = 'skins/joneghost.png';
 const clarice = document.querySelector('.clarice');
@@ -47,6 +47,7 @@ function start() {
 
             johnny.src = johnnyGameOver;
             johnny.style.opacity = '0.8';
+            characterIndex = parseInt(localStorage.getItem('char'));
 
             clearInterval(loop);
             clearInterval(contador);
@@ -71,6 +72,7 @@ function customize() {
 
 function joneNovo() {
     characterIndex = 1;
+    localStorage.setItem('char', characterIndex);
     johnny.src='skins/jone-Novo.png';
     johnnyGameOver = 'skins/joneghost.png';
     skins.style.display = 'none';
@@ -78,6 +80,7 @@ function joneNovo() {
 
 function joneClassico() {
     characterIndex = 2;
+    localStorage.setItem('char', characterIndex);
     johnny.src='skins/jone-classico.png';
     johnny.style.bottom = '30px';
     johnnyGameOver = 'skins/jnclasghost.png'
@@ -87,6 +90,7 @@ function joneClassico() {
 
 function joneChaves() {
     characterIndex = 3;
+    localStorage.setItem('char', characterIndex);
     johnny.src='skins/jone-chaves.png';
     johnnyGameOver = 'skins/jnchavesghost.png';
     skins.style.display = 'none';
@@ -94,6 +98,7 @@ function joneChaves() {
 
 function jonoel() {
     characterIndex = 4;
+    localStorage.setItem('char', characterIndex);
     johnny.src='skins/jone-noel.png';
     johnnyGameOver = 'skins/jonoelghost.png';
     skins.style.display = 'none';
@@ -101,6 +106,7 @@ function jonoel() {
 
 function clone() {
     characterIndex = 5;
+    localStorage.setItem('char', characterIndex);
     localStorage.setItem("index", 5);
     johnny.src='skins/clone.png';
     johnnyGameOver = 'skins/cloneghost.png';
