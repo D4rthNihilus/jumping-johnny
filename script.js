@@ -1,7 +1,6 @@
 const startButton = document.querySelector('.start');
 const customButton = document.querySelector('.customButton');
 let skins = document.querySelector('.skins');
-let characterIndex = parseInt(localStorage.getItem('char'));
 const johnny = document.querySelector('.johnny');
 let johnnyGameOver = 'skins/joneghost.png';
 const clarice = document.querySelector('.clarice');
@@ -15,6 +14,8 @@ const gameover = document.querySelector('.gameover');
 const reloadButton = document.querySelector('.reload');
 
 function start() {
+    johnny.src = localStorage.getItem('char');
+
     grass.style.animation = 'walking 2.5s infinite linear';
     startButton.style.display = 'none';
     customButton.style.display = 'none';
@@ -61,6 +62,7 @@ function start() {
             clouds.src = 'images/bats.webp';
         }
     }, 10);
+
     document.addEventListener('keydown', jump);
     document.addEventListener('touchstart', jump);
 }
@@ -71,16 +73,16 @@ function customize() {
 
 function joneNovo() {
     characterIndex = 1;
-    localStorage.setItem('char', characterIndex);
     johnny.src='skins/jone-Novo.png';
+    localStorage.setItem('char', johnny.src);
     johnnyGameOver = 'skins/joneghost.png';
     skins.style.display = 'none';
 }
 
 function joneClassico() {
     characterIndex = 2;
-    localStorage.setItem('char', characterIndex);
     johnny.src='skins/jone-classico.png';
+    localStorage.setItem('char', johnny.src);
     johnny.style.bottom = '30px';
     johnnyGameOver = 'skins/jnclasghost.png'
     skins.style.display = 'none';
@@ -89,25 +91,24 @@ function joneClassico() {
 
 function joneChaves() {
     characterIndex = 3;
-    localStorage.setItem('char', characterIndex);
     johnny.src='skins/jone-chaves.png';
+    localStorage.setItem('char', johnny.src);
     johnnyGameOver = 'skins/jnchavesghost.png';
     skins.style.display = 'none';
 }
 
 function jonoel() {
     characterIndex = 4;
-    localStorage.setItem('char', characterIndex);
     johnny.src='skins/jone-noel.png';
+    localStorage.setItem('char', johnny.src);
     johnnyGameOver = 'skins/jonoelghost.png';
     skins.style.display = 'none';
 }
 
 function clone() {
     characterIndex = 5;
-    localStorage.setItem('char', characterIndex);
-    localStorage.setItem("index", 5);
     johnny.src='skins/clone.png';
+    localStorage.setItem('char', johnny.src);
     johnnyGameOver = 'skins/cloneghost.png';
     skins.style.display = 'none';
 }
