@@ -19,7 +19,7 @@ function start() {
     grass.style.animation = 'walking 2.5s infinite linear';
     startButton.style.display = 'none';
     customButton.style.display = 'none';
-    clarice.style.animation = 'clarice-animation 2s infinite linear';
+    clarice.style.animation = 'clarice-animation 2.5s infinite linear';
     let contador = setInterval(function(){
                 score++;
                 divscore.innerHTML = `${score} Clarices`;
