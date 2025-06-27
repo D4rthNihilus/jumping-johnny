@@ -23,7 +23,7 @@ function start() {
     let contador = setInterval(function(){
                 score++;
                 divscore.innerHTML = `${score} Clarices`;
-            }, 2000);
+            }, 2500);
     const jump = () => {
         johnny.classList.add('jump');
 
