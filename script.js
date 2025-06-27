@@ -1,7 +1,7 @@
 const startButton = document.querySelector('.start');
 const customButton = document.querySelector('.customButton');
 let skins = document.querySelector('.skins');
-let characterIndex = 1;
+let characterIndex = parseInt(localStorage.getItem('char'));
 const johnny = document.querySelector('.johnny');
 let johnnyGameOver = 'skins/joneghost.png';
 const clarice = document.querySelector('.clarice');
@@ -47,7 +47,6 @@ function start() {
 
             johnny.src = johnnyGameOver;
             johnny.style.opacity = '0.8';
-            characterIndex = parseInt(localStorage.getItem('char'));
 
             clearInterval(loop);
             clearInterval(contador);
