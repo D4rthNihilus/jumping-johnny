@@ -4,7 +4,6 @@ let johnnyGameOver = localStorage.getItem('ghost');
 let lifeSkin = String(localStorage.getItem('skin'));
 let skins = document.querySelector('.skins');
 const johnny = document.querySelector('.johnny');
-johnny.src = lifeSkin;
 const clarice = document.querySelector('.clarice');
 const sky = document.querySelector('div.game');
 const sun = document.querySelector('.sun');
@@ -18,6 +17,8 @@ const reloadButton = document.querySelector('.reload');
 if (lifeSkin == null || lifeSkin == undefined || lifeSkin == '' || lifeSkin == "" || !lifeSkin) {
     lifeSkin = "skins/jone-novo.png";
 }
+
+johnny.src = lifeSkin;
 
 function start() {
     grass.style.animation = 'walking 2.5s infinite linear';
