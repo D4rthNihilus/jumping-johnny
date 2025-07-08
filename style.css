@@ -101,13 +101,14 @@ div.game {
 
 .landscape > div.land {
     background-color: rgb(223, 217, 217);
-    width: 100px;
-    height: 80px;
+    width: 125px;
+    height: 100px;
     display: grid;
     justify-content: center;
     align-items: center;
     box-sizing: border-box;
     border: 3px solid white;
+    overflow: scroll;
 }
 
 .landscape > div.land:hover {
