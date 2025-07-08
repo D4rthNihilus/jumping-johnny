@@ -15,6 +15,10 @@ let divscore = document.querySelector('.score');
 const gameover = document.querySelector('.gameover');
 const reloadButton = document.querySelector('.reload');
 
+if (lifeSkin == null || lifeSkin == undefined || lifeSkin == '' || lifeSkin == "" || !lifeSkin) {
+    lifeSkin = "skins/jone-novo.png";
+}
+
 function start() {
     grass.style.animation = 'walking 2.5s infinite linear';
     startButton.style.display = 'none';
