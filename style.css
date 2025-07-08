@@ -87,7 +87,7 @@ div.game {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    margin: auto;
+    overflow-y: scroll;
     position: absolute;
     display: flex;
     flex-flow: row wrap;
@@ -95,6 +95,7 @@ div.game {
     align-items: center;
     gap: 10px;
     padding: 20px 0px;
+    margin: auto;
     border-radius: 10px;
     box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.452);
 }
@@ -108,7 +109,6 @@ div.game {
     align-items: center;
     box-sizing: border-box;
     border: 3px solid white;
-    overflow: scroll;
 }
 
 .landscape > div.land:hover {
