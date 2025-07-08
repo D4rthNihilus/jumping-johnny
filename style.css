@@ -79,6 +79,45 @@ div.game {
     background-color: rgb(1, 1, 39);
 }
 
+.landscape {
+    width: 80%;
+    height: 300px;
+    background-color: white;
+    z-index: 5;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: auto;
+    position: absolute;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 20px 0px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.452);
+}
+
+.landscape > div.land {
+    background-color: rgb(223, 217, 217);
+    width: 100px;
+    height: 80px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    border: 3px solid white;
+}
+
+.landscape > div.land:hover {
+    border: 3px solid red;
+}
+
+.landscape > div.land > img {
+    width: 94px;
+}
+
 .skins {
     background-color: white;
     z-index: 5;

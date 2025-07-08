@@ -75,7 +75,7 @@ function start() {
 }
 
 function customize() {
-    skins.style.display = 'grid';
+    options.style.display = 'grid';
 }
 
 function joneNovo() {
